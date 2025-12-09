@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InstaVibes - Social Media Marketing Campaign</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; background: #fff; color: #1a1a1a; }
+        nav { position: fixed; width: 100%; top: 0; padding: 1.5rem 3rem; background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); z-index: 1000; box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05); }
+        .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 2rem; font-weight: 900; background: linear-gradient(135deg, #fa709a, #fee140); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+        .nav-links a { color: #1a1a1a; text-decoration: none; font-weight: 700; transition: color 0.3s ease; }
+        .nav-links a:hover { color: #fa709a; }
+        .hero { min-height: 100vh; background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); display: flex; align-items: center; padding: 8rem 3rem 4rem; }
+        .hero-content { max-width: 1400px; margin: 0 auto; text-align: center; color: #fff; }
+        .hero h1 { font-size: clamp(3rem, 8vw, 6rem); font-weight: 900; margin-bottom: 1rem; line-height: 1.1; }
+        .hero .hashtag { font-size: 2rem; font-weight: 700; margin-bottom: 2rem; }
+        .hero p { font-size: 1.3rem; margin-bottom: 3rem; opacity: 0.95; }
+        .btn { padding: 1.2rem 3rem; background: #fff; color: #fa709a; border-radius: 50px; font-weight: 700; font-size: 1.1rem; text-decoration: none; display: inline-block; transition: all 0.3s ease; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); }
+        section { padding: 6rem 3rem; }
+        .section-title { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; text-align: center; margin-bottom: 3rem; }
+        .posts-grid { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .post-card { aspect-ratio: 1; background: linear-gradient(135deg, #fa709a, #fee140); border-radius: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; padding: 2rem; color: #fff; transition: all 0.3s ease; cursor: pointer; }
+        .post-card:hover { transform: scale(1.05) rotate(2deg); box-shadow: 0 25px 70px rgba(250, 112, 154, 0.4); }
+        .post-icon { font-size: 5rem; }
+        .post-stats { text-align: center; }
+        .post-likes { font-size: 1.5rem; font-weight: 900; margin-bottom: 0.5rem; }
+        .post-type { font-size: 1rem; font-weight: 600; opacity: 0.9; }
+        .stats { background: #f9f9f9; }
+        .stats-grid { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; text-align: center; }
+        .stat-box h2 { font-size: 4rem; font-weight: 900; background: linear-gradient(135deg, #fa709a, #fee140); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem; }
+        .stat-box p { font-size: 1.2rem; color: #666; font-weight: 600; }
+        .strategy { background: #fff; }
+        .strategy-grid { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; }
+        .strategy-item { background: #f9f9f9; padding: 2.5rem; border-radius: 20px; }
+        .strategy-item h3 { font-size: 1.5rem; font-weight: 900; margin-bottom: 1rem; color: #fa709a; }
+        .strategy-item p { color: #666; line-height: 1.8; }
+        .cta { background: linear-gradient(135deg, #fa709a, #fee140); color: #fff; text-align: center; }
+        .cta p { font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.95; }
+        footer { background: #1a1a1a; color: #fff; padding: 3rem; text-align: center; }
+        footer p { color: rgba(255, 255, 255, 0.7); }
+        footer a { color: #fa709a; text-decoration: none; margin: 0 1rem; }
+        @media (max-width: 768px) { nav { padding: 1rem 1.5rem; } section { padding: 4rem 1.5rem; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">InstaVibes</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#campaign">Campaign</a></li>
+                <li><a href="#results">Results</a></li>
+                <li><a href="index.html">← Portfolio</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>InstaVibes Campaign 2025</h1>
+            <p class="hashtag">#LiveYourBestLife</p>
+            <p>A 30-day social media campaign that generated 1.2M impressions and 300% engagement increase</p>
+            <a href="#results" class="btn">View Results</a>
+        </div>
+    </section>
+
+    <section id="campaign">
+        <h2 class="section-title">Campaign Content</h2>
+        <div class="posts-grid">
+            <div class="post-card">
+                <div class="post-icon">📸</div>
+                <div class="post-stats">
+                    <div class="post-likes">125K</div>
+                    <div class="post-type">Photo Posts</div>
+                </div>
+            </div>
+            <div class="post-card">
+                <div class="post-icon">🎥</div>
+                <div class="post-stats">
+                    <div class="post-likes">98K</div>
+                    <div class="post-type">Video Reels</div>
+                </div>
+            </div>
+            <div class="post-card">
+                <div class="post-icon">✨</div>
+                <div class="post-stats">
+                    <div class="post-likes">156K</div>
+                    <div class="post-type">Stories</div>
+                </div>
+            </div>
+            <div class="post-card">
+                <div class="post-icon">🌟</div>
+                <div class="post-stats">
+                    <div class="post-likes">203K</div>
+                    <div class="post-type">Carousel Posts</div>
+                </div>
+            </div>
+            <div class="post-card">
+                <div class="post-icon">💬</div>
+                <div class="post-stats">
+                    <div class="post-likes">89K</div>
+                    <div class="post-type">Discussions</div>
+                </div>
+            </div>
+            <div class="post-card">
+                <div class="post-icon">🎉</div>
+                <div class="post-stats">
+                    <div class="post-likes">145K</div>
+                    <div class="post-type">Contests</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="results" class="stats">
+        <h2 class="section-title">Campaign Results</h2>
+        <div class="stats-grid">
+            <div class="stat-box">
+                <h2>1.2M</h2>
+                <p>Total Reach</p>
+            </div>
+            <div class="stat-box">
+                <h2>300%</h2>
+                <p>Engagement Increase</p>
+            </div>
+            <div class="stat-box">
+                <h2>45K</h2>
+                <p>New Followers</p>
+            </div>
+            <div class="stat-box">
+                <h2>580K</h2>
+                <p>Total Likes</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="strategy">
+        <h2 class="section-title">Our Strategy</h2>
+        <div class="strategy-grid">
+            <div class="strategy-item">
+                <h3>Content Planning</h3>
+                <p>Developed a comprehensive 30-day content calendar with varied post types to maximize engagement and reach across different audience segments.</p>
+            </div>
+            <div class="strategy-item">
+                <h3>Visual Consistency</h3>
+                <p>Created a cohesive visual identity with branded templates, color schemes, and design elements that built instant recognition.</p>
+            </div>
+            <div class="strategy-item">
+                <h3>Community Engagement</h3>
+                <p>Fostered authentic connections through interactive content, user-generated content campaigns, and responsive community management.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2 class="section-title">Ready to Grow Your Brand?</h2>
+        <p>Let's create a social media campaign that drives real results for your business</p>
+        <a href="#" class="btn">Get Started</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 InstaVibes Campaign. All rights reserved.</p>
+        <div style="margin-top: 1rem;">
+            <a href="index.html">Back to Portfolio</a>
+            <a href="#">Contact</a>
+            <a href="#">Case Studies</a>
+        </div>
+    </footer>
+</body>
+</html>

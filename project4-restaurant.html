@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flavor House - Exceptional Dining Experience</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Playfair+Display:wght@700;900&display=swap">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background: #fff; color: #1a1a1a; }
+        nav { position: fixed; width: 100%; top: 0; padding: 1.5rem 3rem; background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); z-index: 1000; box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05); }
+        .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900; background: linear-gradient(135deg, #43e97b, #38f9d7); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+        .nav-links a { color: #1a1a1a; text-decoration: none; font-weight: 600; transition: color 0.3s ease; }
+        .nav-links a:hover { color: #43e97b; }
+        .hero { min-height: 100vh; background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); display: flex; align-items: center; padding: 8rem 3rem 4rem; }
+        .hero-content { max-width: 1400px; margin: 0 auto; text-align: center; color: #fff; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 8vw, 6rem); font-weight: 900; margin-bottom: 1.5rem; line-height: 1.1; }
+        .hero p { font-size: 1.5rem; margin-bottom: 3rem; opacity: 0.95; }
+        .btn { padding: 1.2rem 3rem; background: #fff; color: #43e97b; border-radius: 50px; font-weight: 700; font-size: 1.1rem; text-decoration: none; display: inline-block; transition: all 0.3s ease; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); }
+        section { padding: 6rem 3rem; }
+        .section-title { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; text-align: center; margin-bottom: 3rem; }
+        .menu-grid { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; }
+        .menu-item { background: #fff; padding: 2.5rem; border-radius: 20px; border: 2px solid #f0f0f0; transition: all 0.3s ease; }
+        .menu-item:hover { transform: translateY(-10px); border-color: #43e97b; box-shadow: 0 20px 60px rgba(67, 233, 123, 0.2); }
+        .dish-icon { font-size: 4rem; margin-bottom: 1.5rem; }
+        .menu-item h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .menu-item p { color: #666; margin-bottom: 1rem; line-height: 1.7; }
+        .price { font-size: 1.5rem; font-weight: 700; color: #43e97b; }
+        .about { background: #f9f9f9; }
+        .about-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+        .about-text h2 { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 900; margin-bottom: 1.5rem; }
+        .about-text p { font-size: 1.1rem; color: #666; line-height: 1.8; margin-bottom: 1.5rem; }
+        .about-image { height: 400px; background: linear-gradient(135deg, #43e97b, #38f9d7); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 12rem; }
+        .features-grid { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2.5rem; text-align: center; }
+        .feature { padding: 2rem; }
+        .feature h3 { font-size: 3rem; margin-bottom: 1rem; }
+        .feature p { font-size: 1.1rem; color: #666; line-height: 1.7; }
+        .reservation { background: linear-gradient(135deg, #43e97b, #38f9d7); color: #fff; text-align: center; }
+        .reservation p { font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.95; }
+        footer { background: #1a1a1a; color: #fff; padding: 3rem; text-align: center; }
+        footer p { color: rgba(255, 255, 255, 0.7); }
+        footer a { color: #43e97b; text-decoration: none; margin: 0 1rem; }
+        @media (max-width: 768px) {
+            nav { padding: 1rem 1.5rem; }
+            section { padding: 4rem 1.5rem; }
+            .about-content { grid-template-columns: 1fr; }
+            .about-image { height: 300px; font-size: 8rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Flavor House</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="index.html">← Portfolio</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Where Every Bite Tells a Story</h1>
+            <p>Experience culinary excellence in a warm, inviting atmosphere</p>
+            <a href="#reservation" class="btn">Reserve a Table</a>
+        </div>
+    </section>
+
+    <section id="menu">
+        <h2 class="section-title">Our Menu Highlights</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="dish-icon">🍕</div>
+                <h3>Artisan Wood-Fired Pizza</h3>
+                <p>Hand-tossed dough topped with imported Italian ingredients</p>
+                <span class="price">$18.99</span>
+            </div>
+            <div class="menu-item">
+                <div class="dish-icon">🍝</div>
+                <h3>Handmade Pasta</h3>
+                <p>Fresh pasta made daily with authentic recipes</p>
+                <span class="price">$22.99</span>
+            </div>
+            <div class="menu-item">
+                <div class="dish-icon">🥗</div>
+                <h3>Farm Fresh Salads</h3>
+                <p>Organic greens with seasonal vegetables and house dressing</p>
+                <span class="price">$14.99</span>
+            </div>
+            <div class="menu-item">
+                <div class="dish-icon">🥩</div>
+                <h3>Premium Steaks</h3>
+                <p>Grass-fed beef cooked to perfection</p>
+                <span class="price">$38.99</span>
+            </div>
+            <div class="menu-item">
+                <div class="dish-icon">🦞</div>
+                <h3>Fresh Seafood</h3>
+                <p>Daily catch prepared with Mediterranean flair</p>
+                <span class="price">$32.99</span>
+            </div>
+            <div class="menu-item">
+                <div class="dish-icon">🍰</div>
+                <h3>Signature Desserts</h3>
+                <p>House-made creations to satisfy your sweet tooth</p>
+                <span class="price">$12.99</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>Our Story</h2>
+                <p>Founded in 2015, Flavor House has been delighting diners with exceptional cuisine and warm hospitality. Our passion for fresh, locally-sourced ingredients and innovative cooking techniques has made us a beloved destination for food lovers.</p>
+                <p>Led by award-winning Chef Maria Rodriguez, our kitchen team crafts each dish with creativity and care, honoring both tradition and innovation.</p>
+            </div>
+            <div class="about-image">🍽️</div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">Why Choose Us</h2>
+        <div class="features-grid">
+            <div class="feature">
+                <h3>👨‍🍳</h3>
+                <p><strong>Expert Chefs</strong><br>Award-winning culinary team</p>
+            </div>
+            <div class="feature">
+                <h3>🌱</h3>
+                <p><strong>Fresh Ingredients</strong><br>Locally-sourced, organic produce</p>
+            </div>
+            <div class="feature">
+                <h3>🍷</h3>
+                <p><strong>Wine Selection</strong><br>Curated wine list from around the world</p>
+            </div>
+            <div class="feature">
+                <h3>⭐</h3>
+                <p><strong>5-Star Experience</strong><br>Exceptional service and ambiance</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="reservation" class="reservation">
+        <h2 class="section-title">Reserve Your Table</h2>
+        <p>Open Tuesday - Sunday, 5:00 PM - 11:00 PM</p>
+        <a href="#" class="btn">Make a Reservation</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Flavor House Restaurant. All rights reserved.</p>
+        <div style="margin-top: 1rem;">
+            <a href="index.html">Back to Portfolio</a>
+            <a href="#">Contact</a>
+            <a href="#">Location</a>
+        </div>
+    </footer>
+</body>
+</html>
